@@ -123,7 +123,7 @@
         output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
       } catch (error) {
         console.error(`${error}`);
-        output.innerHTML = error.message; // Use error.message to access the error message
+        output.innerHTML = error.message; 
       } finally {
         console.log('ok');
       }
@@ -190,17 +190,14 @@
       console.time("Time");
     });
 
-    // End Timer
     errorBtns[12].addEventListener('click', () => {
       console.timeEnd("Time");
     });
 
-    // Console Trace
     errorBtns[13].addEventListener('click', () => {
       console.trace();
     });
 
-    // Trigger a global error
     errorBtns[14].addEventListener('click', () => {
       throw new Error("trigger a global error");
     });
